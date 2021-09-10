@@ -118,6 +118,10 @@ int main() {
 
     //This test is for error 5. An interesting property of cycles in input is that they will all come about when a node has more than one parent. So, if we check each node to ensure it only has one
     //  parent using a test very similar to test three, we will avoid input loops entirely.
+    if (root == NULL){
+      cout << "E5";
+      return 0;
+    }
     unordered_map<char, int> error5;
     for(unsigned int x = 0; x < stageVec.size(); x ++){
         error5[stageVec[x][3]] += 1;
